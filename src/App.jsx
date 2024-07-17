@@ -7,7 +7,7 @@ function App() {
   let changeToGreen = (event) =>{
     if(seq.length < 9){
       event.target.style.backgroundColor = 'green';
-      seq.push(event.target.id);
+      if(!seq.includes(event.target.id))seq.push(event.target.id);
       if(seq.length == 9 ){
         lastClicked();
       }
